@@ -60,7 +60,7 @@ REPLACE:wheat = {
 	default_market_price = 1
 	
 	demand_add = {	
-		all = 0.01
+		all = 0.001
 	}
 	demand_multiply = {
 		nobles = 2.25
@@ -84,7 +84,7 @@ REPLACE:maize = {
 	default_market_price = 1
 	
 	demand_add = {
-		all = 0.08
+		all = 0.008
 	}
 	demand_multiply = {
 		nobles = 2.25
@@ -106,7 +106,7 @@ REPLACE:rice = {
 	
 	default_market_price = 1
 	demand_add = {
-		all = 0.005
+		all = 0.0005
 	}
 	
 	demand_multiply = {
@@ -131,7 +131,7 @@ REPLACE:millet = {
 	
 	default_market_price = 1
 	demand_add = {
-		all = 0.02
+		all = 0.002
 	}
 	
 	demand_multiply = {
@@ -156,7 +156,7 @@ REPLACE:legumes = {
 	default_market_price = 1
 	transport_cost = 0.5
 	demand_add = {
-		all = 0.01
+		all = 0.001
 	}
 	
 	demand_multiply = {
@@ -179,7 +179,7 @@ REPLACE:potato = {
 	default_market_price = 1
 	
 	demand_add = {
-		all = 0.01
+		all = 0.001
 	}
 
 	demand_multiply = {
@@ -200,13 +200,13 @@ REPLACE:cloth = {		#Daily clothing, Canvas, Uniforms, Course table cloth, etc
 	default_market_price = 3
 	
 	demand_add = {
-		all = 0.005
+		all = 0.0005
 	}
 
 	demand_multiply = {
-		nobles = 7
-		clergy = 5.25
-		burghers = 3.5
+		nobles = 40
+		clergy = 40
+		burghers = 20
 		peasants = 1
 		soldiers = 1
 		laborers = 1
