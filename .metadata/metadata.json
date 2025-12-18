@@ -1,10 +1,10 @@
 ﻿{
-	"name":	"better_demands_lite",
-	"id":	"better_demands_lite.myMod",
+	"name":	"better_demands",
+	"id":	"better_demands.myMod",
 	"version":	"0.10",
-	"supported_game_version":	"1.0.9",
+	"supported_game_version":	"1.0.10",
 	"short_description":	"Better Demands Mod",
-	"tags":	["Balance", "Gameplay"],
+	"tags":	["Balance", "Gameplay", "Trade and Economics"],
 	"relationships":	[],
 	"picture": "thumbnail.png",
 	"game_custom_data":	{
