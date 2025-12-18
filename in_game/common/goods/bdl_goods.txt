@@ -598,7 +598,7 @@ REPLACE:liquor = { 		#What it says
 	default_market_price = 2.5
 	
 	demand_add = {
-		all = 0.003
+		all = 0.008
 	}
 	
 	demand_multiply = {
@@ -622,7 +622,7 @@ REPLACE:beer = { 		#the nectar of the gods
 	default_market_price = 2
 	
 	demand_add = {
-		all = 0.006
+		all = 0.016
 	}	
 	
 	demand_multiply = {
@@ -648,7 +648,7 @@ REPLACE:wine = {
 	ai_rgo_size_importance = 1.5
 	
 	demand_add = {
-		all = 0.003
+		all = 0.004
 	}
 	demand_multiply = {
 		nobles = 6.25
