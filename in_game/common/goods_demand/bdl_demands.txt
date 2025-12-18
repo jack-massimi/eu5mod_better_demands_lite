@@ -1,0 +1,64 @@
+##############################################################
+# This is a special demands, as it has a hardcoded tag
+#
+# code also checks for scriptvalue from the pop scope
+#
+# This scales with the demands in the goods scripted per pop_type
+#
+############################################################
+
+INSERT:pop_demand = {
+
+	REPLACE:olives = {
+		value = 1
+		if = {
+			limit = {
+				OR = {
+					culture = culture:turkish_culture
+					culture = culture:turkoman_culture
+				}
+			}
+			multiply = {
+				value = 1.2
+				desc = "POP_DEMAND_TURKISH"
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					culture = culture:languedocien
+					culture = culture:provencal
+					culture = culture:albanian
+				}
+			}
+			multiply = {
+				value = 1.2
+				desc = "POP_DEMAND_CULTURAL_PREFERENCES"
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					culture = { has_culture_group = culture_group:iberian_group }
+					culture = { has_culture_group = culture_group:italian_group }
+					culture = { has_culture_group = culture_group:greek_group }
+				}
+			}
+			multiply = {
+				value = 1.2
+				desc = "POP_DEMAND_CULTURAL_PREFERENCES"
+			}
+		}
+		if = {
+			limit = { #Maghrebis use olives
+				culture = { has_culture_group = culture_group:maghrebi_group }
+			}
+			multiply = {
+				value = 1.2
+				desc = "POP_DEMAND_MAGHREBI"
+			}
+		}
+	}
+	
+	category = pop_needs
+}

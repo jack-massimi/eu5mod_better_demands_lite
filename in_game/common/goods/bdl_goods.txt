@@ -1,0 +1,1464 @@
+#########################
+# Necessities - has a floor and low ceiling to demand 0-1-2
+#########################
+
+REPLACE:coal = {
+	method = mining
+	category = raw_material
+	color = goods_coal
+	default_market_price = 2
+	transport_cost = 2
+	
+	
+	demand_add = {
+		all = 0.004
+	}
+	
+	demand_multiply = {
+		nobles = 5
+		burghers = 2.5
+		clergy = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}	
+	
+}
+
+REPLACE:lumber  = {
+	method = forestry
+	category = raw_material
+	color = goods_lumber
+	default_market_price = 1.5
+	base_production = 0.1
+	ai_rgo_size_importance = 3 # ai preference to avoid building a city on this rgo
+
+	ai_rgo_expansion_priority = 0.025
+
+	demand_add = {
+		all = 0.0025
+	}
+	
+	demand_multiply = {
+		nobles = 5
+		burghers = 2.5
+		clergy = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+
+}
+
+REPLACE:wheat = {
+	method = farming
+	category = raw_material
+	color = goods_wheat
+	
+	food = 8.0
+	
+	default_market_price = 1
+	
+	demand_add = {	
+		all = 0.01
+	}
+	demand_multiply = {
+		nobles = 2.25
+		clergy = 1.875
+		burghers = 1.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+	
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:maize = {
+	method = farming
+	category = raw_material
+	color = goods_maize
+	
+	food = 8.0
+	
+	default_market_price = 1
+	
+	demand_add = {
+		all = 0.08
+	}
+	demand_multiply = {
+		nobles = 2.25
+		clergy = 1.875
+		burghers = 1.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+	custom_tags = { new_world_goods }
+}
+
+REPLACE:rice = {
+	method = farming
+	category = raw_material
+	color = goods_rice
+	
+	food = 10.0
+	
+	default_market_price = 1
+	demand_add = {
+		all = 0.005
+	}
+	
+	demand_multiply = {
+		nobles = 2.25
+		clergy = 1.875
+		burghers = 1.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+	
+
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:millet = {
+	method = farming
+	category = raw_material
+	color = goods_millet
+	
+	food = 5
+	
+	default_market_price = 1
+	demand_add = {
+		all = 0.02
+	}
+	
+	demand_multiply = {
+		nobles = 2.25
+		clergy = 1.875
+		burghers = 1.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+
+
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:legumes = {
+	method = farming
+	category = raw_material
+	color = goods_legumes
+	
+	food = 5
+	default_market_price = 1
+	transport_cost = 0.5
+	demand_add = {
+		all = 0.01
+	}
+	
+	demand_multiply = {
+		nobles = 2.25
+		clergy = 1.875
+		burghers = 1.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+	
+}
+
+REPLACE:potato = {
+	method = farming
+	category = raw_material
+	color = goods_potato
+	
+	food = 8
+	default_market_price = 1
+	
+	demand_add = {
+		all = 0.01
+	}
+
+	demand_multiply = {
+		nobles = 2.25
+		clergy = 1.875
+		burghers = 1.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+
+	custom_tags = { new_world_goods }
+}
+
+REPLACE:cloth = {		#Daily clothing, Canvas, Uniforms, Course table cloth, etc
+	category = produced
+	color = goods_cloth
+	default_market_price = 3
+	
+	demand_add = {
+		all = 0.005
+	}
+
+	demand_multiply = {
+		nobles = 7
+		clergy = 5.25
+		burghers = 3.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+	}
+
+}
+
+#########################
+# Nice to Haves - low ceiling 1-2
+#########################
+
+REPLACE:salt = {
+	method = gathering
+	category = raw_material
+	color = goods_salt
+	default_market_price = 4
+	
+	demand_add = {
+		all = 0.006
+	}
+
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+REPLACE:medicaments = { #Medicinal plants, Pills, Opium, Mummy Powder, etc
+	method = gathering
+	category = raw_material
+	color = goods_medicaments
+	default_market_price = 4
+	transport_cost = 0.5
+	
+	demand_add = {
+		all = 0.002
+	}
+	
+	ai_rgo_size_importance = 3
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+
+}
+
+REPLACE:weaponry = { #Swords, clubs, spears, halberds, bows, crossbows, etc
+	category = produced
+	color = goods_weaponry
+	default_market_price = 3	
+	
+	demand_add = {
+		all = 0.001
+	}
+	
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+REPLACE:tar = {
+	category = produced
+	color = goods_tar
+	default_market_price = 2
+
+	demand_add = {
+		all = 0.001
+	}
+
+	demand_multiply = {
+		nobles = 5
+		clergy = 3.75
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+REPLACE:leather = {
+	category = produced
+	color = goods_leather
+	default_market_price = 3
+
+	demand_add = {
+		all = 0.003
+	}
+
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+REPLACE:tools = {		
+	category = produced
+	color = goods_tools
+	default_market_price = 3
+	
+	demand_add = {
+		all = 0.001
+	}	
+	
+	demand_multiply = {
+		nobles = 5
+		clergy = 3.75
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+REPLACE:masonry = {		# basically bricks etc..
+	category = produced
+	color = goods_masonry
+	default_market_price = 1
+	
+	demand_add = {
+		all = 0.0005
+	}
+	demand_multiply = {
+		nobles = 5
+		clergy = 3.75
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+	
+	
+	ai_rgo_expansion_priority = 0.25
+}
+
+# Base up by 50%, multipliers made way bigger
+REPLACE:pottery  = {
+	category = produced
+	color = goods_pottery
+	default_market_price = 1
+	
+	demand_add = {
+		all =  0.003
+	}	
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+# Reduced across the board. People don't need so much fucking furniture.
+REPLACE:furniture  = {
+	category = produced
+	color = goods_furniture
+	default_market_price = 3
+	
+	demand_add = {
+		all =  0.001
+	}	
+
+	demand_multiply = {
+		nobles = 5
+		clergy = 3.75
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+	
+}
+
+REPLACE:wild_game = {
+	method = hunting
+	category = raw_material
+	color = goods_wild_game
+	
+	food = 3.5
+	
+	default_market_price = 1.5
+
+	demand_add = {
+		all =  0.002
+	}	
+	
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+
+}
+
+REPLACE:fruit = {
+	method = farming
+	category = raw_material
+	color = goods_fruit
+	
+	food = 4
+	default_market_price = 1.5
+	
+	demand_add = {	
+		all = 0.002
+	}
+	
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+
+}
+
+REPLACE:beeswax = {
+	method = farming
+	category = raw_material
+	color = goods_beeswax
+
+	food = 2.5
+
+	default_market_price = 2
+	
+	demand_add = {
+		all = 0.001
+	}
+	
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+}
+
+REPLACE:fish = {
+	method = gathering
+	category = raw_material
+	color = goods_fish
+	
+	food = 5.0
+	
+	default_market_price = 1.5
+	demand_add = {
+		all = 0.002
+	}
+	
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+
+	
+}
+
+REPLACE:livestock = {
+	method = farming
+	category = raw_material
+	color = goods_livestock
+	
+	food = 8
+	default_market_price = 1.5
+	ai_rgo_size_importance = 1.5 # ai preference to avoid building a city on this rgo
+	
+	demand_add = {	
+		all = 0.002		
+	}
+
+	demand_multiply = {
+		nobles = 4
+		clergy = 3
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		peasants = 1.2
+	}
+
+	
+	custom_tags = { old_world_goods }
+}
+
+#########################
+# Alcohol/Tobacco - Very High ceiling 3-4
+#########################
+
+REPLACE:liquor = { 		#What it says
+	category = produced
+	color = goods_liquor
+	default_market_price = 2.5
+	
+	demand_add = {
+		all = 0.003
+	}
+	
+	demand_multiply = {
+		nobles = 6.25
+		clergy = 3
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		all = 0.5
+	}
+}
+
+REPLACE:beer = { 		#the nectar of the gods
+	category = produced
+	color = goods_beer
+	default_market_price = 2
+	
+	demand_add = {
+		all = 0.006
+	}	
+	
+	demand_multiply = {
+		nobles = 6.25
+		clergy = 3
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		all = 0.5
+	}
+}
+
+REPLACE:wine = {
+	method = farming
+	category = raw_material
+	color = goods_wine
+	default_market_price = 2
+	ai_rgo_size_importance = 1.5
+	
+	demand_add = {
+		all = 0.003
+	}
+	demand_multiply = {
+		nobles = 6.25
+		clergy = 3
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		all = 0.5
+	}
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:tobacco = {
+	method = farming
+	category = raw_material
+	color = goods_tobacco
+	default_market_price = 3
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		all = 0.005
+	}
+
+	demand_multiply = {
+		nobles = 6.25
+		clergy = 3
+		burghers = 2.5
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0.1
+	}
+
+	wealth_impact_threshold = {
+		all = 0.5
+	}
+
+	custom_tags = { new_world_goods }
+}
+
+#########################
+# Luxury Goods - Middling ceiling 4-5
+#########################
+
+# No change. Paper is valuable already
+REPLACE:paper = {		#Paper
+	category = produced
+	color = goods_paper
+	default_market_price = 2
+	
+	demand_add = {
+		upper = 0.01
+	}	
+
+	demand_multiply = {
+		nobles = 1
+		clergy = 4
+		burghers = 2
+	}
+	
+	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+}
+
+# Added demand for all upper pops. Reduced noble demand by factor of 10.
+REPLACE:horses = { #War Horses
+	method = farming
+	category = raw_material
+	color = goods_horses
+	default_market_price = 3
+	transport_cost = 2
+	ai_rgo_size_importance = 1.5
+	
+	demand_add = {
+		upper =  0.0025
+	}	
+
+	demand_multiply = {
+		nobles = 10
+	}
+
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+
+	custom_tags = { old_world_goods }
+
+}
+
+REPLACE:incense = {
+	method = farming
+	category = raw_material
+	color = goods_incense
+	default_market_price = 2.5
+	transport_cost = 0.5
+	
+	demand_add = {
+		clergy = 0.01
+	}	
+	
+	
+	wealth_impact_threshold = {
+		all = 0.5
+	}
+
+}
+
+REPLACE:mercury = {
+	method = mining
+	category = raw_material
+	color = goods_mercury
+	default_market_price = 3
+	ai_rgo_size_importance = 10
+
+	demand_add = {
+		all = 0.00005
+	}	
+	
+	demand_multiply = {
+		nobles = 4
+		clergy = 2
+		burghers = 2
+		peasants = 1
+		soldiers = 1
+		laborers = 1
+		slaves = 0
+	}
+
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+}
+
+# Doubled base, halfed noble mult
+REPLACE:porcelain = { 
+	category = produced
+	color = goods_porcelain
+	default_market_price = 3
+	transport_cost = 0.5
+	
+	demand_add = {
+		upper = 0.001
+	}	
+	demand_multiply = {
+		nobles = 10
+	}
+
+	development_threshold = 30
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+
+}
+
+# Added demand for all upper pops. Divided noble demand by 10.
+REPLACE:firearms = { #Guns, Gunpowder, Grenades
+	category = produced
+	color = goods_firearms
+	default_market_price = 3
+	transport_cost = 1.0
+	
+	demand_add = {
+		upper = 0.002
+		soldiers = 0.001
+	}
+	
+	demand_multiply = {
+		nobles = 10
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+
+}
+
+# Added upper pop demand equal to porcelein.
+REPLACE:glass = {	#Everything from beads and bottles to fine Lenses
+	category = produced
+	color = goods_glass
+	default_market_price = 2
+	transport_cost = 0.5
+
+	demand_add = {
+		upper = 0.001
+	}
+
+	demand_multiply = {
+		nobles = 10
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+}
+
+# No change. Fine cloth is valuable already
+REPLACE:fine_cloth = {	#Embroidery, Silks, Luxury Clothing, etc
+	category = produced
+	color = goods_fine_cloth
+	default_market_price = 6
+	
+	demand_add = {
+		upper = 0.025
+	}
+	
+	demand_multiply = {
+		nobles = 10
+	}
+	
+	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+
+}
+
+# No change. Books are valuable already
+REPLACE:books = { #books, newspapers, booklets, pamphlets, etc
+	category = produced
+	color = goods_books
+	default_market_price = 5
+	
+	demand_add = {
+		upper = 0.01
+	}	
+
+	demand_multiply = {
+		clergy = 4
+		burghers = 2
+	}
+	
+	development_threshold = 30
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+}
+
+# Doubled base reduced nobles by half
+REPLACE:jewelry = {
+	category = produced
+	color = goods_jewelry
+	default_market_price = 5
+	transport_cost = 0.5
+	
+	demand_add = {
+		upper = 0.01
+	}
+
+	demand_multiply = {
+		nobles = 5
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+}
+
+# Unchanged. No experience with this.
+REPLACE:lacquerware = {
+	category = produced
+	color = goods_lacquerware
+	default_market_price = 5
+	demand_add = {
+		upper =  0.02
+	}	
+
+	demand_multiply = {
+		nobles = 2.5
+	}
+	
+	development_threshold = 20
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+}
+
+# Doubled base, halved nobles
+REPLACE:fur = {
+	method = hunting
+	category = raw_material
+	color = goods_fur
+	default_market_price = 2
+	
+	ai_rgo_size_importance = 5
+
+	food = 2.0
+	
+	demand_add = {
+		upper = 0.01
+	}
+
+	demand_multiply = {
+		nobles = 5
+	}
+
+	wealth_impact_threshold = {
+		all = 1.2
+	}
+
+}
+
+# I want to add demand here, but it is working strangely.
+REPLACE:slaves_goods = {
+	category = produced
+	color = goods_slaves
+
+	is_slaves = yes
+
+	default_market_price = 3
+
+}
+
+#########################
+# Super Duper Luxury Goods - Middling ceiling 
+#########################
+
+REPLACE:goods_gold = {
+	method = mining
+	category = raw_material
+	color = goods_gold
+	default_market_price = 10
+
+	ai_rgo_size_importance = 10 # ai preference to avoid building a city on this rgo
+	inflation = yes
+	
+	ai_rgo_expansion_priority = 0.2
+	
+	demand_add = {
+		nobles = 0.025
+	}	
+	
+	wealth_impact_threshold = {
+		all = 1.25
+	}
+
+}
+
+REPLACE:silver = {
+	method = mining
+	category = raw_material
+	color = goods_silver
+	default_market_price = 8
+	ai_rgo_size_importance = 10 # ai preference to avoid building a city on this rgo
+	inflation = yes
+	
+	ai_rgo_expansion_priority = 0.2
+	
+	demand_add = {
+		nobles = 0.025
+	}
+	
+
+	
+	wealth_impact_threshold = {
+		all = 1.25
+	}
+
+}
+
+REPLACE:ivory = {
+	method = hunting
+	category = raw_material
+	color = goods_ivory
+	default_market_price = 4
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+	}
+	
+	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		all = 1.25
+	}
+}
+
+REPLACE:gems = {
+	method = mining
+	category = raw_material
+	color = goods_gems
+	default_market_price = 4
+	transport_cost = 0.5
+	
+	ai_rgo_size_importance = 5 # ai preference to avoid building a city on this rgo
+
+	demand_add = {
+		nobles = 0.05
+	}
+
+
+	wealth_impact_threshold = {
+		all = 1.3
+	}
+	
+}
+
+REPLACE:pearls = {
+	method = gathering
+	category = raw_material
+	color = goods_pearls
+	default_market_price = 4
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.0025
+	}
+
+	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		nobles = 1.0
+		burghers = 1.5
+	}
+	
+}
+
+REPLACE:amber = {
+	method = gathering
+	category = raw_material
+	color = goods_amber
+	default_market_price = 4
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.1
+		burghers = 0.005
+	}	
+	
+	wealth_impact_threshold = {
+		nobles = 1.0
+		burghers = 1.5
+	}
+}
+
+REPLACE:elephants = {
+	method = farming
+	category = raw_material
+	color = goods_elephants
+	default_market_price = 10
+	transport_cost = 5
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles =  0.1
+	}	
+	
+	wealth_impact_threshold = {
+		nobles = 2
+	}
+}
+
+REPLACE:marble = {
+	method = mining
+	category = raw_material
+	color = goods_marble
+	default_market_price = 5
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+	}	
+	
+	development_threshold = 40
+	wealth_impact_threshold = {
+		nobles = 1.5
+	}
+}
+
+###########################
+# Luxury Foods & Spice - High ceiling
+###########################
+
+REPLACE:tea = {
+	method = farming
+	category = raw_material
+	color = goods_tea
+	default_market_price = 3
+	ai_rgo_size_importance = 5
+
+	demand_add = {
+		nobles = 0.2
+		burghers = 0.01
+		clergy = 0.01
+	}
+		
+	wealth_impact_threshold = {
+		all = 0.75
+	}
+
+}
+
+REPLACE:cocoa = {
+	method = farming
+	category = raw_material
+	color = goods_cocoa
+	default_market_price = 4
+	ai_rgo_size_importance = 5
+	demand_add = {
+		nobles = 0.1
+		burghers = 0.01
+		clergy = 0.01
+	}
+	
+	wealth_impact_threshold = {
+		all = 0.75
+	}
+	
+	custom_tags = { new_world_goods }
+}
+
+REPLACE:coffee = {
+	method = farming
+	category = raw_material
+	color = goods_coffee
+	default_market_price = 3
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.01
+		burghers = 0.001
+		clergy = 0.0005
+		soldiers = 0.001
+	}
+	
+	wealth_impact_threshold = {
+		all = 0.75
+	}
+
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:saffron = {
+	method = farming
+	category = raw_material
+	color = goods_saffron
+	default_market_price = 5
+	transport_cost = 0.5
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.002
+		clergy = 0.005
+	}
+
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+	
+}
+
+REPLACE:pepper = {
+	method = farming
+	category = raw_material
+	color = goods_pepper
+	default_market_price = 5
+	transport_cost = 0.5
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.0025
+		clergy = 0.005
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+
+}
+
+REPLACE:cloves = {
+	method = farming
+	category = raw_material
+	color = goods_cloves
+	default_market_price = 5
+	transport_cost = 0.5
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.0025
+		clergy = 0.005
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+
+}
+
+REPLACE:chili = {
+	method = farming
+	category = raw_material
+	color = goods_chili
+	default_market_price = 5
+	transport_cost = 0.5
+	ai_rgo_size_importance = 5
+	
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.0025
+		clergy = 0.005
+	}
+	
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+	
+	custom_tags = { new_world_goods }
+}
+
+REPLACE:sugar = {
+	method = farming
+	category = raw_material
+	color = goods_sugar
+	default_market_price = 3
+	ai_rgo_size_importance = 5
+
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.005
+		clergy = 0.005
+	}
+
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:olives = {
+	method = farming
+	category = raw_material
+	color = goods_olives
+	ai_rgo_size_importance = 5
+	
+	default_market_price = 3
+	
+	demand_add = {
+		nobles = 0.05
+		burghers = 0.0025
+		clergy = 0.005
+	}
+
+	custom_tags = { old_world_goods }
+}
+
+###########################
+# No Pop Demands
+###########################
+
+REPLACE:steel = { 	#Late Game Steel - Needs a purpose. How about railroads? Eh?
+	category = produced
+	color = goods_steel
+	default_market_price = 5
+	transport_cost = 2
+}
+
+REPLACE:cannons = { #Cannons, Cannon Ammunition
+	category = produced
+	color = goods_cannons
+	default_market_price = 4
+	transport_cost = 1.5
+}
+
+REPLACE:naval_supplies = { #All things required for ships to run
+	category = produced
+	color = goods_naval_supplies
+	default_market_price = 3
+}
+
+REPLACE:cotton = {
+	method = farming
+	category = raw_material
+	color = goods_cotton
+	default_market_price = 3
+	ai_rgo_size_importance = 5
+
+	custom_tags = { old_world_goods }
+}
+
+REPLACE:clay = {
+	method = gathering
+	category = raw_material
+	color = goods_clay
+	default_market_price = 0.5
+	
+	base_production = 0.4
+	
+	ai_rgo_expansion_priority = 0.025
+}
+
+REPLACE:sand = {
+	method = gathering
+	category = raw_material
+	color = goods_sand
+	default_market_price = 0.5
+	
+	base_production = 0.2
+}
+
+REPLACE:iron = {
+	method = mining
+	category = raw_material
+	color = goods_iron
+	default_market_price = 3
+	transport_cost = 1
+	ai_rgo_size_importance = 10 # ai preference to avoid building a city on this rgo
+	
+	ai_rgo_expansion_priority = 0.025
+}
+
+REPLACE:copper = {
+	method = mining
+	category = raw_material
+	color = goods_copper
+	default_market_price = 3
+	transport_cost = 2
+}
+
+REPLACE:stone = {
+	method = mining
+	category = raw_material
+	color = goods_stone
+	default_market_price = 1
+	base_production = 0.2
+	transport_cost = 5
+	
+	ai_rgo_expansion_priority = 0.025
+}
+
+REPLACE:tin = {
+	method = mining
+	category = raw_material
+	color = goods_tin
+	default_market_price = 2
+	transport_cost = 2
+
+}
+
+REPLACE:lead = {
+	method = mining
+	category = raw_material
+	color = goods_lead
+	default_market_price = 2
+	transport_cost = 2
+
+}
+
+REPLACE:silk = {
+	method = farming
+	category = raw_material
+	color = goods_silk
+	default_market_price = 4
+	ai_rgo_size_importance = 5
+}
+
+REPLACE:dyes = {
+	method = farming
+	category = raw_material
+	color = goods_dyes
+	default_market_price = 4
+	transport_cost = 0.5
+	ai_rgo_size_importance = 5
+}
+
+REPLACE:fiber_crops = {
+	method = farming
+	category = raw_material
+	color = goods_fiber_crops
+	default_market_price = 2
+}
+
+REPLACE:saltpeter = {
+	method = mining
+	category = raw_material
+	color = goods_saltpeter
+	default_market_price = 2
+}
+
+REPLACE:alum = {
+	method = mining
+	category = raw_material
+	color = goods_alum
+	default_market_price = 3
+}
+
+REPLACE:wool = {
+	method = farming
+	category = raw_material
+	color = goods_wool
+	default_market_price = 2.5
+
+	food = 5.0
+	ai_rgo_size_importance = 1.5 # ai preference to avoid building a city on this rgo
+}
+
+###########################
