@@ -239,7 +239,7 @@ REPLACE:salt = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -266,7 +266,7 @@ REPLACE:medicaments = { #Medicinal plants, Pills, Opium, Mummy Powder, etc
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 
 }
@@ -291,7 +291,7 @@ REPLACE:weaponry = { #Swords, clubs, spears, halberds, bows, crossbows, etc
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -315,7 +315,7 @@ REPLACE:tar = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -339,7 +339,7 @@ REPLACE:leather = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -363,7 +363,7 @@ REPLACE:tools = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -386,7 +386,7 @@ REPLACE:masonry = {		# basically bricks etc..
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 	
 	
@@ -413,7 +413,7 @@ REPLACE:pottery  = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -438,7 +438,7 @@ REPLACE:furniture  = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 	
 }
@@ -467,7 +467,7 @@ REPLACE:wild_game = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 
 }
@@ -495,7 +495,7 @@ REPLACE:fruit = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 
 }
@@ -524,7 +524,7 @@ REPLACE:beeswax = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 }
 
@@ -551,7 +551,7 @@ REPLACE:fish = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 
 	
@@ -581,7 +581,7 @@ REPLACE:livestock = {
 	}
 
 	wealth_impact_threshold = {
-		peasants = 1.2
+		peasants = 1.0
 	}
 
 	
@@ -717,7 +717,7 @@ REPLACE:paper = {		#Paper
 	development_threshold = 20
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 }
 
@@ -740,7 +740,7 @@ REPLACE:horses = { #War Horses
 
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 
 	custom_tags = { old_world_goods }
@@ -788,7 +788,7 @@ REPLACE:mercury = {
 
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 }
 
@@ -809,7 +809,7 @@ REPLACE:porcelain = {
 	development_threshold = 30
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 
 }
@@ -831,7 +831,7 @@ REPLACE:firearms = { #Guns, Gunpowder, Grenades
 	}
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 
 }
@@ -852,7 +852,7 @@ REPLACE:glass = {	#Everything from beads and bottles to fine Lenses
 	}
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 }
 
@@ -873,7 +873,7 @@ REPLACE:fine_cloth = {	#Embroidery, Silks, Luxury Clothing, etc
 	development_threshold = 20
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 
 }
@@ -896,7 +896,7 @@ REPLACE:books = { #books, newspapers, booklets, pamphlets, etc
 	development_threshold = 30
 	
 	wealth_impact_threshold = {
-		all = 1.1
+		all = 1.0
 	}
 }
 
@@ -916,7 +916,7 @@ REPLACE:jewelry = {
 	}
 	
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 }
 
@@ -935,7 +935,7 @@ REPLACE:lacquerware = {
 	
 	development_threshold = 20
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 }
 
@@ -959,7 +959,7 @@ REPLACE:fur = {
 	}
 
 	wealth_impact_threshold = {
-		all = 1.2
+		all = 1.0
 	}
 
 }
@@ -995,7 +995,7 @@ REPLACE:goods_gold = {
 	}	
 	
 	wealth_impact_threshold = {
-		all = 1.25
+		all = 1.1
 	}
 
 }
@@ -1017,7 +1017,7 @@ REPLACE:silver = {
 
 	
 	wealth_impact_threshold = {
-		all = 1.25
+		all = 1.1
 	}
 
 }
@@ -1036,7 +1036,7 @@ REPLACE:ivory = {
 	development_threshold = 20
 	
 	wealth_impact_threshold = {
-		all = 1.25
+		all = 1.1
 	}
 }
 
@@ -1055,7 +1055,7 @@ REPLACE:gems = {
 
 
 	wealth_impact_threshold = {
-		all = 1.3
+		all = 1.1
 	}
 	
 }
@@ -1075,8 +1075,8 @@ REPLACE:pearls = {
 	development_threshold = 20
 	
 	wealth_impact_threshold = {
-		nobles = 1.0
-		burghers = 1.5
+		nobles = 1.1
+		burghers = 1.1
 	}
 	
 }
@@ -1094,8 +1094,8 @@ REPLACE:amber = {
 	}	
 	
 	wealth_impact_threshold = {
-		nobles = 1.0
-		burghers = 1.5
+		nobles = 1.1
+		burghers = 1.1
 	}
 }
 
@@ -1129,7 +1129,7 @@ REPLACE:marble = {
 	
 	development_threshold = 40
 	wealth_impact_threshold = {
-		nobles = 1.5
+		nobles = 1.1
 	}
 }
 
@@ -1211,7 +1211,7 @@ REPLACE:saffron = {
 	}
 
 	wealth_impact_threshold = {
-		all = 1.1
+		all = 0.75
 	}
 	
 }
@@ -1231,7 +1231,7 @@ REPLACE:pepper = {
 	}
 	
 	wealth_impact_threshold = {
-		all = 1.1
+		all = 0.75
 	}
 
 }
@@ -1251,7 +1251,7 @@ REPLACE:cloves = {
 	}
 	
 	wealth_impact_threshold = {
-		all = 1.1
+		all = 0.75
 	}
 
 }
@@ -1272,7 +1272,7 @@ REPLACE:chili = {
 	
 	
 	wealth_impact_threshold = {
-		all = 1.1
+		all = 0.75
 	}
 	
 	custom_tags = { new_world_goods }
@@ -1291,6 +1291,10 @@ REPLACE:sugar = {
 		clergy = 0.005
 	}
 
+	wealth_impact_threshold = {
+		all = 0.75
+	}
+
 	custom_tags = { old_world_goods }
 }
 
@@ -1306,6 +1310,10 @@ REPLACE:olives = {
 		nobles = 0.05
 		burghers = 0.0025
 		clergy = 0.005
+	}
+
+	wealth_impact_threshold = {
+		all = 0.75
 	}
 
 	custom_tags = { old_world_goods }
