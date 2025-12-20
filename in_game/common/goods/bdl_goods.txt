@@ -349,7 +349,7 @@ REPLACE:tools = {
 	default_market_price = 3
 	
 	demand_add = {
-		all = 0.0005
+		all = 0.00005
 	}	
 	
 	demand_multiply = {
@@ -534,7 +534,7 @@ REPLACE:fish = {
 	
 	default_market_price = 1.5
 	demand_add = {
-		all = 0.00125
+		all = 0.0015
 	}
 	
 	demand_multiply = {
@@ -563,7 +563,7 @@ REPLACE:livestock = {
 	ai_rgo_size_importance = 1.5 # ai preference to avoid building a city on this rgo
 	
 	demand_add = {	
-		all = 0.0025	
+		all = 0.00125	
 	}
 
 	demand_multiply = {
@@ -584,7 +584,7 @@ REPLACE:livestock = {
 }
 
 #########################
-# Alcohol/Tobacco - Very High ceiling 3-4
+# Alcohol/Tobacco - Doubled base
 #########################
 
 REPLACE:liquor = { 		#What it says
@@ -593,21 +593,21 @@ REPLACE:liquor = { 		#What it says
 	default_market_price = 2.5
 	
 	demand_add = {
-		all = 0.004
+		all = 0.0016
 	}
 	
 	demand_multiply = {
-		nobles = 30
-		clergy = 10
-		burghers = 10
+		nobles = 10
+		clergy = 5
+		burghers = 5
 		peasants = 1
 		soldiers = 1
 		laborers = 1
 	}
 
 	wealth_impact_threshold = {
-		burghers = 0.8
-		peasants = 0.9
+		burghers = 0.7
+		peasants = 0.8
 	}
 }
 
@@ -617,21 +617,21 @@ REPLACE:beer = { 		#the nectar of the gods
 	default_market_price = 2
 	
 	demand_add = {
-		all = 0.008
+		all = 0.0032
 	}	
 	
 	demand_multiply = {
-		nobles = 30
-		clergy = 10
-		burghers = 10
+		nobles = 10
+		clergy = 5
+		burghers = 5
 		peasants = 1
 		soldiers = 1
 		laborers = 1
 	}
 
 	wealth_impact_threshold = {
-		burghers = 0.8
-		peasants = 0.9
+		burghers = 0.7
+		peasants = 0.8
 	}
 }
 
@@ -643,20 +643,20 @@ REPLACE:wine = {
 	ai_rgo_size_importance = 1.5
 	
 	demand_add = {
-		all = 0.002
+		all = 0.0008
 	}
 	demand_multiply = {
-		nobles = 30
-		clergy = 10
-		burghers = 10
+		nobles = 10
+		clergy = 5
+		burghers = 5
 		peasants = 1
 		soldiers = 1
 		laborers = 1
 	}
 
 	wealth_impact_threshold = {
-		burghers = 0.8
-		peasants = 0.9
+		burghers = 0.7
+		peasants = 0.8
 	}
 	custom_tags = { old_world_goods }
 }
@@ -673,9 +673,9 @@ REPLACE:tobacco = {
 	}
 
 	demand_multiply = {
-		nobles = 30
-		clergy = 10
-		burghers = 10
+		nobles = 10
+		clergy = 5
+		burghers = 5
 		peasants = 1
 		soldiers = 1
 		laborers = 1
